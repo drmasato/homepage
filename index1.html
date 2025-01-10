@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手順</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        ol {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        li {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>手順を確認してください</h1>
+    </header>
+    <ol id="steps">
+        <li>GitHubリポジトリの作成</li>
+        <li>HTMLファイルの作成</li>
+        <li>リポジトリにファイルをプッシュ</li>
+        <li>GitHub Pagesの設定</li>
+        <li>ホームページの公開</li>
+    </ol>
+    <button id="add-step">新しい手順を追加</button>
+    <footer>
+        &copy; 2025 作成者: あなたの名前
+    </footer>
+
+    <script>
+        // JavaScriptで手順を追加する機能
+        document.getElementById('add-step').addEventListener('click', function () {
+            const steps = document.getElementById('steps');
+            const newStep = document.createElement('li');
+            const stepText = prompt('新しい手順を入力してください:');
+            if (stepText) {
+                newStep.textContent = stepText;
+                steps.appendChild(newStep);
+            }
+        });
+    </script>
+</body>
+</html>
